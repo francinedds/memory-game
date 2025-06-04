@@ -1,0 +1,154 @@
+:root {
+  --primary-color: #dcb2b7;
+  --secondary-color: #ffeef0;
+  --details-color: #946a70;
+  --background-color: #fffafb;
+  --card-back-color: rgba(255, 255, 255, 0.767);
+  --neutral-color: #fff;
+
+  --font-main: "Poppins", sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+}
+
+.window {
+  width: 500px;
+  box-shadow: 8px 8px 0px var(--details-color); 
+  background-color: #f0f0f0;
+  font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.window-header {
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.window-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--neutral-color);
+}
+
+.window-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.window-button {
+  width: 12px;
+  height: 12px;
+  background-color: var(--neutral-color);
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  background-color: var(--secondary-color);
+}
+
+.game-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+
+.arrow-left{
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.icon-refresh{
+  margin-left: 10px;
+  color: var(--details-color);
+  transition: transform 0.3s;
+}
+
+.icon-refresh:hover {
+  transform: rotate(90deg);
+}
+
+h1 {
+  width: 330px;
+  display: flex;
+  align-items: center; 
+  margin-left: 10px;
+  font-size: 12px; 
+  font-weight: 500;
+  color: var(--details-color);
+  background-color: var(--secondary-color);
+  padding: 4px 12px; 
+  border-radius: 15px;
+  gap: 170px; 
+}
+
+button {
+  display: flex;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.game-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.tabuleiro {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 70px);
+  row-gap: 10px;
+  column-gap: 40px;
+  padding: 40px;
+}
+
+.carta {
+  width: 100px;
+  height: 100px;
+  background: var(--neutral-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.imagem-carta {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.verso {
+  width: 100%;
+  height: 100%;
+  background-color: var(--neutral-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
